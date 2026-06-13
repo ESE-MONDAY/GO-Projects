@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sample Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background: #f7f9fc;
+      color: #24292f;
+    }
+
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 1.5rem;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, .08);
+    }
+
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: 600;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      margin-top: 0.4rem;
+      padding: 0.75rem;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    .button {
+      margin-top: 1.5rem;
+      padding: 0.85rem 1.25rem;
+      background: #2b6cb0;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background: #234e8a;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 1rem;
+      color: #2b6cb0;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <h1>Simple Form</h1>
+    <p>Fill out the form below and submit it to test the sample page.</p>
+    <form action="/form" method="POST">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your name" required />
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="your@example.com" required />
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Type your message" rows="5" required></textarea>
+      <input type="Submit" value="Submit" class="button" />
+    </form>
+    <a class="back-link" href="index.html">Back to Home</a>
+  </main>
+</body>
+
+</html>
