@@ -1,0 +1,8 @@
+global:
+  scrape_interval: 2s 
+
+scrape_configs:
+  - job_name: 'movies-api'
+    static_configs:
+      # Prometheus maps this container name automatically across the Docker bridge
+      - targets: ['movies-api:8080']
