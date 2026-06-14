@@ -1,6 +1,4 @@
-Fair call. Let's strip away the corporate buzzwords and generic documentation fluff. Here is a clean, punchy, developer-focused README that reads like it was written by an engineer, not an instruction manual.
 
----
 
 # Movies CRUD with Live Prometheus & Grafana
 
@@ -14,7 +12,7 @@ The entire app stack is sandboxed inside Docker to ensure zero configuration fri
 * **Prometheus (Port 9090):** Scrapes the Go app's `/metrics` endpoint every 2 seconds.
 * **Grafana (Port 3000):** Visualizes the Prometheus time-series data using dynamic line charts.
 
----
+
 
 ## File Tree
 
@@ -28,7 +26,7 @@ The entire app stack is sandboxed inside Docker to ensure zero configuration fri
 
 ```
 
----
+
 
 ## Quick Start
 
@@ -52,7 +50,7 @@ hey -n 30000 -c 100 http://localhost:8080/movies
 
 ```
 
----
+
 
 ## API Spec
 
@@ -76,7 +74,7 @@ curl -X POST -H "Content-Type: application/json" -d '{"title":"Inception","direc
 
 ```
 
----
+
 
 ## Logging Format (`log/slog`)
 
@@ -87,7 +85,7 @@ Every incoming HTTP request dumps a structured JSON line to stdout. It looks lik
 
 ```
 
----
+
 
 ## Grafana Dashboard setup
 
@@ -119,9 +117,3 @@ sum(rate(http_request_duration_seconds_count[1m])) by (status)
 
 ```
 
-#### Go Goroutine Tracker (Monitoring memory/thread leaks)
-
-```text
-go_goroutines
-
-```
