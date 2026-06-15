@@ -100,13 +100,12 @@ func main() {
 	// --- CRUD ROUTES ---
 	r.HandleFunc("/movies", getMovies).Methods("GET")
 	r.HandleFunc("/movies/{id}", getMovie).Methods("GET")
-	r.HandleFunc("/movies", createMovie).Methods("POST") // Fixed the typo here!
+	r.HandleFunc("/movies", createMovie).Methods("POST")
 	r.HandleFunc("/movies/{id}", updateMovie).Methods("PUT")
 	r.HandleFunc("/movies/{id}", deleteMovie).Methods("DELETE")
 
 	slog.Info("Movie CRUD service booting up on port :8080...")
 
-	// Caught the execution error explicitly so it screams if port 8080 is blocked
 	err := http.ListenAndServe("0.0.0.0:8080", r)
 	if err != nil {
 		slog.Error("Server failed to bind to port", slog.String("error", err.Error()))
